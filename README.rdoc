@@ -12,6 +12,13 @@ The GIS functions (acts_as_geom) will only work with PostGIS and Postgresql.
 Install the plugin:
 
   $ script/plugin install git://github.com/markmcdonald51/addressable.git
+
+Run the migration
+  $ script/generate address_migration new
+
+
+
+
   
 == Example
 
