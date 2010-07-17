@@ -1,0 +1,23 @@
+Address
+=======
+
+This is a simple address model that is useful for using in all applications that 
+need a good geo reference. This class strives to be GIS, but is a work in progress. 
+The GIS functions (acts_as_geom) will only work with PostGIS and Postgresql. 
+
+Example
+=======
+
+I use this in many of my models as an addressable polymorphic association as such:
+
+
+  has_one :address, :as => :addressable, 
+    :class_name => 'Address', :dependent => :destroy
+    
+  or
+  
+  has_many :addresses, :as => :addressable,  
+    :class_name => 'Address', :dependent => :destroy
+      
+
+Copyright (c) 2010 HounddogProductions, released under the MIT license
